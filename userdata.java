@@ -1,6 +1,5 @@
-public class bot {
+public class userdata {
      
-    public static void main(String[] args) {
 
         double risk = 0; // 0 - 100 overall risk factor
 
@@ -110,5 +109,5 @@ public class bot {
         boolean hadCovidVaccine; // true if vaccinated for COVID-19
         boolean hadFluVaccine; // true if vaccinated for flu
         boolean hadHepatitisVaccine; // true if vaccinated for hepatitis
-    }
+    
 }
