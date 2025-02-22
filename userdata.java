@@ -1,5 +1,6 @@
-public class userdata {
-     
+import java.util.Scanner;
+
+public class userdata {     
 
         double risk = 0; // 0 - 100 overall risk factor
 
@@ -109,5 +110,146 @@ public class userdata {
         boolean hadCovidVaccine; // true if vaccinated for COVID-19
         boolean hadFluVaccine; // true if vaccinated for flu
         boolean hadHepatitisVaccine; // true if vaccinated for hepatitis
+
+       void user_input(){
+        Scanner sc = new Scanner(System.in);
+
+        
+         //Personal Information
+         System.out.println("Full Name");
+         this.username=sc.nextLine();
+         sc.nextLine();
+
+         System.out.println("Date of Birth (DD/MM/YYYY):");
+         this.DOB=sc.nextLine();
+
+         System.out.println("Date of Birth (DD/MM/YYYY):");
+         this.DOB=sc.nextLine();
+         sc.nextLine();
+
+         System.out.println("Gender:");
+         this.sex=sc.nextLine();
+         sc.nextLine();
+
+         System.out.println("Height (in cm):");
+         this.height=sc.nextDouble();
+
+         System.out.println("Weight (in kg):");
+         this.weight=sc.nextDouble();
+
+         System.out.println("Country of Residence:");
+         this.country=sc.nextLine();
+         sc.nextLine();
+
+         System.out.println("State of Residence:");
+         this.state = sc.nextLine()
+         
+         System.out.println("District of Residence:");
+         this.district = sc.nextLine();
+ 
+         //Lifestyle Assessment
+         System.out.println("Do you currently smoke? (Yes/No) If yes, how frequently do you smoke? (Scale: 0-5)  \n");
+         System.out.println("Do you consume alcohol? (Yes/No) If yes, how frequently do you consume alcohol? (Scale: 0-5) ");
+         System.out.println(" Do you use any recreational drugs? (Yes/No) If yes, how frequently? (Scale: 0-5)");
+         System.out.println("How often do you engage in physical exercise? (Daily/Weekends/None) ");
+         System.out.println("What is your usual intensity of exercise? (Low/Moderate/High)");
+ 
+ 
+         //Cardiovascular Health
+         System.out.println(" Have you ever had a heart attack? (Yes/No)");
+         System.out.println("Have you ever experienced a stroke? (Yes/No) If yes, how many times?");
+         System.out.println("Have you been diagnosed with high blood pressure (HBP)? (Yes/No) If yes, please provide the latest recorded HBP reading.  \n");
+         System.out.println("Have you been diagnosed with low blood pressure (LBP)? (Yes/No) If yes, please provide the latest recorded LBP reading.  \n");
+         System.out.println("What is your most recent cholesterol level reading? (If known)");
+         System.out.println("Have you experienced chest pain in the past year? (Yes/No) If yes, how frequently does it occur? (Enter number of times)");
+         System.out.println("How long does the chest pain typically last? (Enter duration in minutes)");
+         System.out.println("Have you experienced shortness of breath? (Yes/No) If yes, what is the typical duration? (Enter duration in minutes)");
+ 
+ 
+ 
+         //Metabolic Health Screening
+         System.out.println("Have you been diagnosed with diabetes? (Yes/No) If yes, specify type: (Type 1/Type 2)");
+         System.out.println("What was your last recorded fasting blood sugar level? (Enter value if known, else state \"Unknown\")");
+         System.out.println("Are you currently on any medication for diabetes? (Yes/No) If yes, specify the medication.");
+ 
+ 
+         //Thyroid Function
+         System.out.println("Have you been diagnosed with hypothyroidism? (Yes/No)");
+         System.out.println("Have you been diagnosed with hyperthyroidism? (Yes/No)");
+         System.out.println("Are you currently taking any thyroid medication? (Yes/No)");
+ 
+ 
+         //Obesity and Related Conditions
+         System.out.println("Have you ever been diagnosed as obese? (Yes/No)");
+         System.out.println("Have you attempted weight loss programs or treatments in the past? (Yes/No)");
+         System.out.println("Have you undergone bariatric surgery or any weight loss surgery? (Yes/No)");
+ 
+ 
+         //Lipid Profile
+         System.out.println("What is your most recent recorded HDL cholesterol level? (Enter value if known, else state \"Unknown\")");
+         System.out.println("What is your most recent recorded LDL cholesterol level? (Enter value if known, else state \"Unknown\") ");
+         System.out.println("What is your most recent triglycerides level? (Enter value if known, else state \"Unknown\")");
+ 
+ 
+         //Major Organ Systems Evaluation
+         System.out.println("Have you been diagnosed with any liver disease? (Yes/No)");
+         System.out.println("Have you been diagnosed with alcohol-induced liver damage? (Yes/No)");
+         System.out.println("Have you been diagnosed with any kidney disease? (Yes/No)");
+         System.out.println("Have you had kidney stones? (Yes/No)");
+         System.out.println("Have you ever undergone dialysis? (Yes/No)");
+         System.out.println("Are you taking medications that may affect kidney function (e.g., NSAIDs, diuretics)? (Yes/No)");
+ 
+ 
+         //Respiratory Health
+         System.out.println("Have you been diagnosed with asthma? (Yes/No)");
+         System.out.println("Have you been diagnosed with chronic obstructive pulmonary disease (COPD) or chronic bronchitis? (Yes/No) ");
+         System.out.println("Have you been diagnosed with smoking-related lung conditions? (Yes/No)");
+         System.out.println(" Have you been diagnosed with sleep apnea? (Yes/No)");
+         System.out.println("Do you use a CPAP machine for sleep apnea? (Yes/No) ");
+         System.out.println("Have you experienced frequent lung infections? (Yes/No)");
+ 
+ 
+         //Neurological & Mental Health Screening
+         System.out.println("Have you ever experienced a stroke? (Yes/No)");
+         System.out.println("Have you suffered a brain injury in the past? (Yes/No)");
+         System.out.println("Have you been diagnosed with depression? (Yes/No)");
+         System.out.println("Have you been diagnosed with anxiety? (Yes/No)");
+         System.out.println("Have you been diagnosed with bipolar disorder? (Yes/No)");
+         System.out.println("Are you currently taking any psychiatric medications? (Yes/No)");
+         System.out.println("Have you experienced memory loss? (Yes/No)");
+         System.out.println("Have you been diagnosed with dementia or dementia-like symptoms? (Yes/No)");
+ 
+ 
+         //Cancer & Family Medical History
+         System.out.println("Have you ever been diagnosed with cancer? (Yes/No) If yes, what was the stage at diagnosis? (Enter stage number)");
+         System.out.println("Have you undergone any cancer treatment? (Yes/No)");
+         System.out.println("Is there a family history of heart disease? (Yes/No)");
+         System.out.println("Is there a family history of diabetes? (Yes/No)");
+         System.out.println("Is there a family history of cancer? (Yes/No)");
+         System.out.println("Does your family have any known genetic disorders? (Yes/No)");
+ 
+ 
+         //Recent Medical Tests & Examinations
+         System.out.println("Have you had a blood test in the past year? (Yes/No)");
+         System.out.println("Have you undergone an MRI scan? (Yes/No)");
+         System.out.println("Have you undergone a CT scan? (Yes/No)");
+         System.out.println("Have you had an X-ray in the past year? (Yes/No)");
+         System.out.println("Have you undergone a biopsy? (Yes/No)");
+ 
+ 
+         //Medications & Allergies
+         System.out.println("Are you currently taking any prescription medications? (Yes/No)");
+         System.out.println("Are you currently taking any over-the-counter (OTC) medications? (Yes/No)");
+         System.out.println("Do you have any known drug allergies? (Yes/No)");
+ 
+ 
+         //Vaccination History
+         System.out.println("Have you received the COVID-19 vaccine? (Yes/No)");
+         System.out.println("Have you received the flu vaccine? (Yes/No)");
+         System.out.println("Have you received the hepatitis vaccine?(Yes/No)");
+ 
+
+        sc.close();
+       }
     
 }
