@@ -40,3 +40,65 @@ CREATE TABLE HealthProfile (
     hasHypothyroidism BOOLEAN,
     hasHyperthyroidism BOOLEAN,
     takesThyroidMedications BOOLEAN,
+     -- Obesity-Related Conditions
+    isObese BOOLEAN GENERATED ALWAYS AS (BMI > 30) STORED,
+    hasWeightLossHistory BOOLEAN,
+    hadBariatricSurgery BOOLEAN,
+
+    -- Lipid Profile
+    hdl FLOAT,
+    ldl FLOAT,
+    triglycerides FLOAT,
+
+    -- Major Organ Systems Evaluation
+    hasLiverDisease BOOLEAN,
+    hasAlcoholLiverDamage BOOLEAN,
+    hasKidneyDisease BOOLEAN,
+    hadKidneyStones BOOLEAN,
+    hadDialysis BOOLEAN,
+    takesKidneyAffectingMeds BOOLEAN,
+
+    -- Respiratory Health
+    hasAsthma BOOLEAN,
+    hasCOPD BOOLEAN,
+    hasSmokingLungDamage BOOLEAN,
+    hasSleepApnea BOOLEAN,
+    usesCPAP BOOLEAN,
+    hasFrequentLungInfections BOOLEAN,
+
+    -- Neurological & Mental Health Screening
+    hadStroke BOOLEAN,
+    hadBrainInjury BOOLEAN,
+    hasDepression BOOLEAN,
+    hasAnxiety BOOLEAN,
+    hasBipolarDisorder BOOLEAN,
+    takesPsychiatricMeds BOOLEAN,
+    hasMemoryLoss BOOLEAN,
+    hasDementiaSymptoms BOOLEAN,
+
+    -- Cancer & Family Medical History
+    hadCancer BOOLEAN,
+    cancerStage TINYINT,
+    hadCancerTreatment BOOLEAN,
+    familyHasHeartDisease BOOLEAN,
+    familyHasDiabetes BOOLEAN,
+    familyHasCancer BOOLEAN,
+    hasGeneticDisorders BOOLEAN,
+
+    hadRecentBloodTests BOOLEAN,
+    hadMRI BOOLEAN,
+    hadCTScan BOOLEAN,
+    hadXRay BOOLEAN,
+    hadBiopsy BOOLEAN,
+
+    -- Medications & Allergies
+    takesPrescriptionMeds BOOLEAN,
+    takesOTCMeds BOOLEAN,
+    hasDrugAllergies BOOLEAN,
+
+    hadCovidVaccine BOOLEAN,
+    hadFluVaccine BOOLEAN,
+    hadHepatitisVaccine BOOLEAN
+);
+
+select * from HealthProfile;
