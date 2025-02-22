@@ -1,4 +1,4 @@
-**# see master branch for codes**
+
 # AlgoRex
 **1.Avatar – based AI application**
 
