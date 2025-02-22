@@ -3,7 +3,7 @@ public class bot {
     public static void main(String[] args) {
 
 
-        double risk = 0; // 0 - 100 risk factor
+        double risk = 0; //  0 - 100 overall risk factor
 
         //personal details
         String username;
@@ -34,8 +34,18 @@ public class bot {
        int cholesterol_levels ;
 
        int chestpainfreq;
-        double chestpainfreq_duration; //min
-        
+            double chestpainfreq_duration; //min
+
+        double breath_shortness; // duration or 0 if not there
+
+
+    // Metabolic Health Screening
+    // diabetes status
+     
+
+
+       
+
 
 
         
