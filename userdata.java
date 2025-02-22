@@ -116,37 +116,38 @@ public class userdata {
 
         
          //Personal Information
-         System.out.println("Full Name");
+         System.out.print("Enter Full Name: ");
          this.username=sc.nextLine();
-         sc.nextLine();
 
-         System.out.println("Date of Birth (DD/MM/YYYY):");
+         System.out.print("Enter user ID: ");
+         this.userid=sc.nextLine();
+
+         System.out.print("Date of Birth (DD/MM/YYYY): ");
          this.DOB=sc.nextLine();
 
-         System.out.println("Date of Birth (DD/MM/YYYY):");
-         this.DOB=sc.nextLine();
-         sc.nextLine();
-
-         System.out.println("Gender:");
+         System.out.print("Gender: ");
          this.sex=sc.nextLine();
-         sc.nextLine();
 
-         System.out.println("Height (in cm):");
+         System.out.print("Height (in cm): ");
          this.height=sc.nextDouble();
 
-         System.out.println("Weight (in kg):");
+         System.out.print("Weight (in kg): ");
          this.weight=sc.nextDouble();
 
-         System.out.println("Country of Residence:");
-         this.country=sc.nextLine();
-         sc.nextLine();
+         System.out.print("enter age: ");
+         this.age=(short) sc.nextInt();
 
-         System.out.println("State of Residence:");
-         this.state = sc.nextLine()
+         System.out.print("Country of Residence: ");
+         this.country=sc.nextLine();
+
+         System.out.print("State of Residence: ");
+         this.state = sc.nextLine();
          
-         System.out.println("District of Residence:");
+         System.out.print("District of Residence: ");
          this.district = sc.nextLine();
  
+
+
          //Lifestyle Assessment
          System.out.println("Do you currently smoke? (Yes/No) If yes, how frequently do you smoke? (Scale: 0-5)  \n");
          System.out.println("Do you consume alcohol? (Yes/No) If yes, how frequently do you consume alcohol? (Scale: 0-5) ");
