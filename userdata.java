@@ -23,8 +23,6 @@ public class userdata {
         int drug; // 0-5 times consumption level
         String exercise; // daily (low, moderate, high) or weekends (low, moderate, high)
 
-// done above in bot
-
         // Cardiovascular Health Assessment
         boolean heartattack; // true if had a heart attack
         short stroke; // 0 times or more
@@ -36,10 +34,6 @@ public class userdata {
         double chestpainfreq_duration; // Duration of chest pain in minutes
 
         double breath_shortness; // Duration in minutes or 0 if not present
-
-
-
-/////////////////////////////////
 
 
         // Metabolic Health Screening

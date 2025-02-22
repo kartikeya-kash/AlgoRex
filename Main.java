@@ -16,8 +16,23 @@ public class Main {
 
     public static void main (String args[]) throws SQLException, ClassNotFoundException{ // can throw exception 
 
-        userdata user = new userdata();
-        user.user_input(); // used to take inputs from user
+        System.out.println("Before initiating the virtual medical assessment, the system must display a clear consent form informing users about data collection, processing, and storage. Users must explicitly agree by clicking an “Accept & Proceed” button before continuing. Additionally, a medical disclaimer should be prominently shown, stating:\n" + //
+                        "\n" + //
+                        "⚠️ This AI-powered assistant is not a licensed medical professional and does not provide official diagnoses or medical advice. The assessment is for preliminary screening purposes only and should not replace a consultation with a qualified healthcare provider. 🏥✅\n" + //
+                        "\n" + //
+                        "Audit logs should record user consent, ensuring compliance with data privacy regulations.");
+
+                        int consent ; // 0 is for No and 1 is for Yes
+                        Scanner input = new Scanner(System.in);
+                        consent = input.nextInt();
+        if(consent != 1)
+        {
+            System.out.println("Thank you for using VMEA by AlgoRex");
+            return ;
+        }
+
+
+        
 
         try{
             Class.forName("com.mysql.cj.jdbc.Driver"); // load all drivers
@@ -42,7 +57,9 @@ public class Main {
                        
                         break;
                     case 2:
-                    
+                    userdata user = new userdata();
+                    user.user_input(); // used to take inputs from user
+
                         break;
                     case 0:
                         exit(); //exit function
@@ -58,10 +75,24 @@ public class Main {
         }catch(SQLException e){
             System.out.println(e.getMessage());
         }catch(InterruptedException e){
-            throw new RuntimeException(e);
+            System.out.println(e.getMessage());
         }
     
 
+
+        
+    }
+
+    public static void exit() throws InterruptedException {
+        System.out.print("Exiting System");
+        int i = 5;
+        while(i!=0){
+            System.out.print(".");
+            Thread.sleep(1000);
+            i--;
+        }
+        System.out.println();
+        System.out.println("ThankYou For Using Hotel Reservation System!!!");
     }
     
 }
