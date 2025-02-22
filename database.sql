@@ -20,4 +20,23 @@ CREATE TABLE HealthProfile (
     drug TINYINT CHECK (drug BETWEEN 0 AND 5),
     exercise ENUM('daily_low', 'daily_moderate', 'daily_high', 
                   'weekends_low', 'weekends_moderate', 'weekends_high', 'none'),
-	
+	 -- Cardiovascular Health Assessment
+    heartattack BOOLEAN,
+    stroke SMALLINT,
+    HBP INT,
+    LBP INT,
+    cholesterol_levels INT,
+    chestpainfreq INT,
+    chestpainfreq_duration DOUBLE,
+    breath_shortness DOUBLE,
+
+    -- Metabolic Health Screening
+    diabetes BOOLEAN,
+    dib_type TINYINT CHECK (dib_type BETWEEN 0 AND 2),
+    l_sugar_level DOUBLE,
+    medication VARCHAR(50),
+
+    -- Thyroid Function
+    hasHypothyroidism BOOLEAN,
+    hasHyperthyroidism BOOLEAN,
+    takesThyroidMedications BOOLEAN,
