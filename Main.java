@@ -4,6 +4,10 @@ import java.sql.SQLException;
 import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.ResultSet;
+import java.awt.Desktop;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 public class Main {
 
@@ -13,6 +17,18 @@ public class Main {
 
     private static final String password = "Kash@17022005";
 
+    public static void openLink(String url) {
+        if (Desktop.isDesktopSupported()) {
+            try {
+                Desktop.getDesktop().browse(new URI(url));
+                System.out.println("Opening: " + url);
+            } catch (IOException | URISyntaxException e) {
+                e.printStackTrace();
+            }
+        } else {
+            System.out.println("Desktop is not supported, cannot open the link.");
+        }
+    }
 
     public static void main (String args[]) throws SQLException, ClassNotFoundException{ // can throw exception 
 
@@ -54,7 +70,8 @@ public class Main {
 
                 switch (choice) {
                     case 1:
-                       
+                    openLink("https://cdn.botpress.cloud/webchat/v2.2/shareable.html?configUrl=https://files.bpcontent.cloud/2025/02/22/08/20250222081155-ZU8ON9AY.json\n" + //
+                                                "");
                         break;
                     case 2:
                     { 
@@ -63,7 +80,7 @@ public class Main {
                         
                         try {
                 
-                            String sql = "INSERT INTO userdata (username, userid, DOB, sex, height, weight, age, country, state, district, " +
+                            String sql = "INSERT INTO HealthProfile (username, userid, DOB, sex, height, weight, age, country, state, district, " +
                             "smoking, alcohol, drug, exercise, heartattack, stroke, HBP, LBP, cholesterol_levels, " +
                             "chestpainfreq, chestpainfreq_duration, breath_shortness, diabetes, dib_type, l_sugar_level, medication, " +
                             "hasHypothyroidism, hasHyperthyroidism, takesThyroidMedications, hasWeightLossHistory, hadBariatricSurgery, " +
