@@ -118,8 +118,11 @@ public class Main {
                         } catch (SQLException e) {
                             e.printStackTrace();
                         }
-
-
+                        String C_name;
+                        System.out.println("enter the company name to know their risk factor and premiums");
+                        C_name = input.nextLine();
+                        user.calculate_risk(C_name);
+                    
                     }
                         break;
                     case 0:
@@ -153,7 +156,7 @@ public class Main {
             i--;
         }
         System.out.println();
-        System.out.println("ThankYou For Using  Virtual Medical Examiner Assistant (VMEA)!!!");
+        System.out.println("ThankYou For Using  Virtual Medical Examiner Assistant (VMEA) by AlgoRex!!!");
         
     }
     

@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class userdata {     
 
         double risk = 0; // 0 - 100 overall risk factor
+        double prem = 0; 
 
         // Personal Details
         String username;
@@ -368,37 +369,91 @@ public class userdata {
         sc.close();
        }
 
-       void calculate_risk()
+       void calculate_risk(String C_name)
        {
-        if(this.age>90){this.risk+=3;}
-        if(this.age<90 && this.age>70){this.risk+=2;}
-        if(this.age<70){this.risk+=2;}
-        if(this.BMI>30){this.risk+=2;}
-        if(this.smoking >0 && this.smoking <=2){this.risk+=1;}
-        if(this.smoking >2 ){this.risk+=2;}
-        if(this.alcohol>2){this.risk+=2;}
-        if(this.alcohol<=2){this.risk+=1;}
-        if(this.drug>2){this.risk+=2;}
-        if(this.drug<=2){this.risk+=1;}
-        if(this.heartattack==1){this.risk+= 5;}
-        if(this.stroke>=1){this.risk+= 2;}
-        if(this.chestpainfreq>0.5){this.risk+= 1;}
-        if(this.heartattack==1){this.risk+= 5;}
-        if(this.breath_shortness>0.5){this.risk+= 1;}
-        if(this.dib_type>1){this.risk+= 2;}
-        if(this.heartattack==1){this.risk+= 5;}
-        if(this.hasLiverDisease==1){this.risk+= 1;}
-        if(this.hasKidneyDisease==1){this.risk+= 1;}
-        if(this.hadKidneyStones==1){this.risk+= 2;}
-        if(this.hasLiverDisease==1){this.risk+= 1;}
-        if(this.hadDialysis==1){this.risk+= 2;}
-        if(this.hadBrainInjury==1){this.risk+= 5;}
-        if(this.hasBipolarDisorder==1){this.risk+= 2;}
-        if(this.hadCancer==1){this.risk+= 4;}
-        if(this.cancerStage>2){this.risk+= 4;}
-        if(this.hasDrugAllergies==1){this.risk+= 3;}
+        switch (C_name) {
+                case "XYZ":
+                if(this.age>90){this.risk+=3;}
+                if(this.age<90 && this.age>70){this.risk+=2;}
+                if(this.age<70){this.risk+=2;}
+                if(this.BMI>30){this.risk+=2;}
+                if(this.smoking >0 && this.smoking <=2){this.risk+=1;}
+                if(this.smoking >2 ){this.risk+=2;}
+                if(this.alcohol>2){this.risk+=2;}
+                if(this.alcohol<=2){this.risk+=1;}
+                if(this.drug>2){this.risk+=2;}
+                if(this.drug<=2){this.risk+=1;}
+                if(this.heartattack==1){this.risk+= 5;}
+                if(this.stroke>=1){this.risk+= 2;}
+                if(this.chestpainfreq>0.5){this.risk+= 1;}
+                if(this.heartattack==1){this.risk+= 5;}
+                if(this.breath_shortness>0.5){this.risk+= 1;}
+                if(this.dib_type>1){this.risk+= 2;}
+                if(this.heartattack==1){this.risk+= 5;}
+                if(this.hasLiverDisease==1){this.risk+= 1;}
+                if(this.hasKidneyDisease==1){this.risk+= 1;}
+                if(this.hadKidneyStones==1){this.risk+= 2;}
+                if(this.hasLiverDisease==1){this.risk+= 1;}
+                if(this.hadDialysis==1){this.risk+= 2;}
+                if(this.hadBrainInjury==1){this.risk+= 5;}
+                if(this.hasBipolarDisorder==1){this.risk+= 2;}
+                if(this.hadCancer==1){this.risk+= 4;}
+                if(this.cancerStage>2){this.risk+= 4;}
+                if(this.hasDrugAllergies==1){this.risk+= 3;}
+        
+                System.out.println("Risk Factor for XYZ.pvt.ltd is :" + this.risk);
+                if(this.risk<20){this.prem=350;}
+                if(this.risk>20 && this.risk<40){this.prem=550;}
+                if(this.risk>40 && this.risk<60){this.prem=850;}
+                if(this.risk>60 && this.risk<80){this.prem=1050;}
+                if(this.risk>80 ){this.prem=2550;}
+                System.out.println("Premium Factor for XYZ.pvt.ltd is :" + this.risk);
 
-        System.out.println("Risk Factor for user is :" + this.risk);
+                        break;
+
+                case "ABC":
+                if(this.age>90){this.risk+=7;}
+                if(this.age<90 && this.age>70){this.risk+=5;}
+                if(this.age<70){this.risk+=4;}
+                if(this.BMI>30){this.risk+=4;}
+                if(this.smoking >0 && this.smoking <=2){this.risk+=2;}
+                if(this.smoking >2 ){this.risk+=4;}
+                if(this.alcohol>2){this.risk+=3;}
+                if(this.alcohol<=2){this.risk+=2;}
+                if(this.drug>2){this.risk+=3;}
+                if(this.drug<=2){this.risk+=4;}
+                if(this.heartattack==1){this.risk+= 10;}
+                if(this.stroke>=1){this.risk+= 4;}
+                if(this.chestpainfreq>0.5){this.risk+= 1;}
+                if(this.heartattack==1){this.risk+= 10;}
+                if(this.breath_shortness>0.5){this.risk+= 5;}
+                if(this.dib_type>1){this.risk+= 2;}
+                if(this.heartattack==1){this.risk+= 5;}
+                if(this.hasLiverDisease==1){this.risk+= 1;}
+                if(this.hasKidneyDisease==1){this.risk+= 1;}
+                if(this.hadKidneyStones==1){this.risk+= 2;}
+                if(this.hasLiverDisease==1){this.risk+= 1;}
+                if(this.hadDialysis==1){this.risk+= 2;}
+                if(this.hadBrainInjury==1){this.risk+= 5;}
+                if(this.hasBipolarDisorder==1){this.risk+= 2;}
+                if(this.hadCancer==1){this.risk+= 4;}
+                if(this.cancerStage>2){this.risk+= 4;}
+                if(this.hasDrugAllergies==1){this.risk+= 3;}
+                System.out.println("Risk Factor for ABC.pvt.ltd is :" + this.risk);
+                if(this.risk<20){this.prem=250;}
+                if(this.risk>20 && this.risk<40){this.prem=350;}
+                if(this.risk>40 && this.risk<60){this.prem=1150;}
+                if(this.risk>60 && this.risk<80){this.prem=1350;}
+                if(this.risk>80 ){this.prem=2000;}
+                System.out.println("Premium Factor for XYZ.pvt.ltd is :" + this.risk);
+                break;
+        
+                default: System.out.println("Enter company name to see risk factors");
+                        break;
+        }
+
        }
+
+       
     
 }
