@@ -11,7 +11,7 @@ public class userdata {
         String sex;
         double height ;  
         double weight ;   
-        double BMI = weight / Math.pow(height / 100, 2); 
+        double BMI ; 
         short age;
         String country;
         String state;
@@ -140,12 +140,15 @@ public class userdata {
 
          System.out.print("enter your age: ");
          this.age=sc.nextShort();
+         sc.nextLine();
 
          System.out.print("Country of Residence: ");
          this.country=sc.nextLine();
+         sc.nextLine();
 
          System.out.print("State of Residence: ");
          this.state = sc.nextLine();
+         sc.nextLine();
          
          System.out.print("District of Residence: ");
          this.district = sc.nextLine();
