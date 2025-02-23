@@ -24,7 +24,7 @@ public class userdata {
         String exercise; // daily (low, moderate, high) or weekends (low, moderate, high)
 
         // Cardiovascular Health Assessment
-        boolean heartattack; // true if had a heart attack
+        int heartattack; // true if had a heart attack
         short stroke; // 0 times or more
         int HBP; // High blood pressure reading, enter 0 if not applicable
         int LBP; // Low blood pressure reading, enter 0 if not applicable
@@ -37,20 +37,20 @@ public class userdata {
 
 
         // Metabolic Health Screening
-        boolean diabetes;
+        int diabetes;
         short dib_type; // 0 if no diabetes, 1 for Type 1, 2 for Type 2
         double l_sugar_level; // Last fasting blood sugar level, 0 if not applicable
         String medication; // "insulin", "metformin", etc., else enter "none"
 
         // Thyroid Function
-        boolean hasHypothyroidism; // true if diagnosed with hypothyroidism
-        boolean hasHyperthyroidism; // true if diagnosed with hyperthyroidism
-        boolean takesThyroidMedications; // true if taking thyroid medication
+        int hasHypothyroidism; // true if diagnosed with hypothyroidism
+        int hasHyperthyroidism; // true if diagnosed with hyperthyroidism
+        int takesThyroidMedications; // true if taking thyroid medication
 
         // Obesity-Related Conditions
-        boolean isObese = BMI > 30; // Automatically calculated
-        boolean hasWeightLossHistory; // true if attempted weight loss
-        boolean hadBariatricSurgery; // true if gastric bypass or similar
+       // int isObese = BMI > 30; // Automatically calculated
+        int hasWeightLossHistory; // true if attempted weight loss
+        int hadBariatricSurgery; // true if gastric bypass or similar
 
         // Lipid Profile
         float hdl; // HDL cholesterol level
@@ -58,58 +58,58 @@ public class userdata {
         float triglycerides; // Triglycerides level
 
         // Major Organ Systems Evaluation
-        boolean hasLiverDisease; // true if history of liver disease
-        boolean hasAlcoholLiverDamage; // true if diagnosed
-        boolean hasKidneyDisease; // true if history of kidney disease
-        boolean hadKidneyStones; // true if had kidney stones
-        boolean hadDialysis; // true if undergone dialysis
-        boolean takesKidneyAffectingMeds; // true if taking NSAIDs, diuretics
+        int hasLiverDisease; // true if history of liver disease
+        int hasAlcoholLiverDamage; // true if diagnosed
+        int hasKidneyDisease; // true if history of kidney disease
+        int hadKidneyStones; // true if had kidney stones
+        int hadDialysis; // true if undergone dialysis
+        int takesKidneyAffectingMeds; // true if taking NSAIDs, diuretics
 
         // Respiratory Health
-        boolean hasAsthma; // true if diagnosed with asthma
-        boolean hasCOPD; // true if diagnosed with COPD or chronic bronchitis
-        boolean hasSmokingLungDamage; // true if smoking-related lung issues
+        int hasAsthma; // true if diagnosed with asthma
+        int hasCOPD; // true if diagnosed with COPD or chronic bronchitis
+        int hasSmokingLungDamage; // true if smoking-related lung issues
 
-        boolean hasSleepApnea; // true if diagnosed
-        boolean usesCPAP; // true if using CPAP machine
-        boolean hasFrequentLungInfections; // true if frequent infections
+        int hasSleepApnea; // true if diagnosed
+        int usesCPAP; // true if using CPAP machine
+        int hasFrequentLungInfections; // true if frequent infections
 
         // Neurological & Mental Health Screening
-        boolean hadStroke; // true if history of stroke
-        boolean hadBrainInjury; // true if history of brain injury
+        int hadStroke; // true if history of stroke
+        int hadBrainInjury; // true if history of brain injury
 
-        boolean hasDepression; // true if diagnosed with depression
-        boolean hasAnxiety; // true if diagnosed with anxiety
-        boolean hasBipolarDisorder; // true if diagnosed with bipolar disorder
-        boolean takesPsychiatricMeds; // true if on psychiatric meds
+        int hasDepression; // true if diagnosed with depression
+        int hasAnxiety; // true if diagnosed with anxiety
+        int hasBipolarDisorder; // true if diagnosed with bipolar disorder
+        int takesPsychiatricMeds; // true if on psychiatric meds
 
-        boolean hasMemoryLoss; // true if experiencing memory loss
-        boolean hasDementiaSymptoms; // true if dementia symptoms present
+        int hasMemoryLoss; // true if experiencing memory loss
+        int hasDementiaSymptoms; // true if dementia symptoms present
 
         // Cancer & Family Medical History
-        boolean hadCancer; // true if personal history of cancer
+        int hadCancer; // true if personal history of cancer
         int cancerStage; // 0 if no cancer, else stores stage number
-        boolean hadCancerTreatment; // true if undergone cancer treatment
+        int hadCancerTreatment; // true if undergone cancer treatment
 
-        boolean familyHasHeartDisease; // true if family history of heart disease
-        boolean familyHasDiabetes; // true if family history of diabetes
-        boolean familyHasCancer; // true if family history of cancer
-        boolean hasGeneticDisorders; // true if family has genetic disorders
+        int familyHasHeartDisease; // true if family history of heart disease
+        int familyHasDiabetes; // true if family history of diabetes
+        int familyHasCancer; // true if family history of cancer
+        int hasGeneticDisorders; // true if family has genetic disorders
 
-        boolean hadRecentBloodTests; // true if blood test done recently
-        boolean hadMRI; // true if MRI done
-        boolean hadCTScan; // true if CT scan done
-        boolean hadXRay; // true if X-ray done
-        boolean hadBiopsy; // true if biopsy done
+        int hadRecentBloodTests; // true if blood test done recently
+        int hadMRI; // true if MRI done
+        int hadCTScan; // true if CT scan done
+        int hadXRay; // true if X-ray done
+        int hadBiopsy; // true if biopsy done
 
         // Medications & Allergies
-        boolean takesPrescriptionMeds; // true if taking any prescription meds
-        boolean takesOTCMeds; // true if taking over-the-counter meds
-        boolean hasDrugAllergies; // true if allergic to any medication
+        int takesPrescriptionMeds; // true if taking any prescription meds
+        int takesOTCMeds; // true if taking over-the-counter meds
+        int hasDrugAllergies; // true if allergic to any medication
 
-        boolean hadCovidVaccine; // true if vaccinated for COVID-19
-        boolean hadFluVaccine; // true if vaccinated for flu
-        boolean hadHepatitisVaccine; // true if vaccinated for hepatitis
+        int hadCovidVaccine; // true if vaccinated for COVID-19
+        int hadFluVaccine; // true if vaccinated for flu
+        int hadHepatitisVaccine; // true if vaccinated for hepatitis
 
        void user_input(){
         Scanner sc = new Scanner(System.in);
@@ -162,13 +162,13 @@ public class userdata {
          System.out.println(" Do you use any recreational drugs? (Yes/No) If yes, how frequently? (Scale: 0-5)");
          this.drug = sc.nextInt();
          sc.nextLine();
-         System.out.println("How often do you engage in physical exercise? (daily/weekends/none) intensity of exercise? (Low/Moderate/High) enter dl/dm/dh/wl/wm/wh/none ");
+         System.out.println("How often do you engage in physical exercise? (daily/weekends/none) Intensity of exercise? (Low/Moderate/High) enter dl/dm/dh/wl/wm/wh/none ");
          this.exercise = sc.nextLine();
         
  
          //Cardiovascular Health
          System.out.println(" Have you ever had a heart attack? (true/false)");
-         this.heartattack=sc.nextBoolean();
+         this.heartattack=sc.nextInt();
 
          System.out.println("Have you ever experienced a stroke? (Yes/No) If yes, how many times? else enter 0");
          this.stroke=sc.nextShort();
@@ -195,7 +195,7 @@ public class userdata {
  
          //Metabolic Health Screening
          System.out.println("do you have diabetes? (true/false) ");
-         this.diabetes=sc.nextBoolean();
+         this.diabetes=sc.nextInt();
          System.out.println("Have you been diagnosed with diabetes? (Yes/No) If yes, specify type: (Type 1/Type 2 else enter 0)");
         this.dib_type=sc.nextShort();
          System.out.println("What was your last recorded fasting blood sugar level? (Enter value if known, else state 0");
@@ -207,20 +207,20 @@ public class userdata {
  
          //Thyroid Function
          System.out.println("Have you been diagnosed with hypothyroidism? (true/false)");
-         this.hasHypothyroidism=sc.nextBoolean();
+         this.hasHypothyroidism=sc.nextInt();
          System.out.println("Have you been diagnosed with hyperthyroidism? (true/false)");
-         this.hasHyperthyroidism=sc.nextBoolean();
+         this.hasHyperthyroidism=sc.nextInt();
          sc.nextLine();
          System.out.println("Are you currently taking any thyroid medication? (true/false)");
-         this.takesThyroidMedications=sc.nextBoolean();
+         this.takesThyroidMedications=sc.nextInt();
          sc.nextLine();
  
  
          //Obesity and Related Conditions
          System.out.println("Have you attempted weight loss programs or treatments in the past? (Yes/No)");
-         this.hasWeightLossHistory=sc.nextBoolean();
+         this.hasWeightLossHistory=sc.nextInt();
          System.out.println("Have you undergone bariatric surgery or any weight loss surgery? (Yes/No)");
-         this.hadBariatricSurgery=sc.nextBoolean();
+         this.hadBariatricSurgery=sc.nextInt();
  
  
          //Lipid Profile
@@ -237,129 +237,129 @@ public class userdata {
  
          //Major Organ Systems Evaluation
          System.out.println("Have you been diagnosed with any liver disease? (t/f)");
-         this.hasLiverDisease=sc.nextBoolean();
+         this.hasLiverDisease=sc.nextInt();
          sc.nextLine();
          System.out.println("Have you been diagnosed with alcohol-induced liver damage? (Yes/No)");
-         this.hasAlcoholLiverDamage=sc.nextBoolean();
+         this.hasAlcoholLiverDamage=sc.nextInt();
          sc.nextLine();
          System.out.println("Have you been diagnosed with any kidney disease? (Yes/No)");
-         this.hasKidneyDisease=sc.nextBoolean();
+         this.hasKidneyDisease=sc.nextInt();
          sc.nextLine();
          System.out.println("Have you had kidney stones? (Yes/No)");
-         this.hadKidneyStones=sc.nextBoolean();
+         this.hadKidneyStones=sc.nextInt();
          sc.nextLine();
          System.out.println("Have you ever undergone dialysis? (Yes/No)");
-         this.hadDialysis=sc.nextBoolean();
+         this.hadDialysis=sc.nextInt();
          sc.nextLine();
          System.out.println("Are you taking medications that may affect kidney function (e.g., NSAIDs, diuretics)? (Yes/No)");
-         this.takesKidneyAffectingMeds=sc.nextBoolean();
+         this.takesKidneyAffectingMeds=sc.nextInt();
          sc.nextLine();
 
  
  
          //Respiratory Health
          System.out.println("Have you been diagnosed with asthma? (Yes/No)");
-         this.hasAsthma=sc.nextBoolean();
+         this.hasAsthma=sc.nextInt();
          sc.nextLine();
          System.out.println("Have you been diagnosed with chronic obstructive pulmonary disease (COPD) or chronic bronchitis? (Yes/No) ");
-         this.hasCOPD=sc.nextBoolean();
+         this.hasCOPD=sc.nextInt();
          sc.nextLine();
 
          System.out.println("Have you been diagnosed with smoking-related lung conditions? (Yes/No)");
-         this.hasSmokingLungDamage=sc.nextBoolean();
+         this.hasSmokingLungDamage=sc.nextInt();
          sc.nextLine();
          System.out.println(" Have you been diagnosed with sleep apnea? (Yes/No)");
-         this.hasSleepApnea=sc.nextBoolean();
+         this.hasSleepApnea=sc.nextInt();
          sc.nextLine();
 
          System.out.println("Do you use a CPAP machine for sleep apnea? (Yes/No) ");
-         this.usesCPAP=sc.nextBoolean();
+         this.usesCPAP=sc.nextInt();
          sc.nextLine();
          System.out.println("Have you experienced frequent lung infections? (Yes/No)");
-         this.hasFrequentLungInfections=sc.nextBoolean();
+         this.hasFrequentLungInfections=sc.nextInt();
          sc.nextLine();
  
  
          //Neurological & Mental Health Screening
          System.out.println("Have you ever experienced a stroke? (Yes/No)");
-         this.hadStroke=sc.nextBoolean();
+         this.hadStroke=sc.nextInt();
          sc.nextLine();
          System.out.println("Have you suffered a brain injury in the past? (Yes/No)");
-         this.hadBrainInjury=sc.nextBoolean();
+         this.hadBrainInjury=sc.nextInt();
          sc.nextLine();
          System.out.println("Have you been diagnosed with depression? (Yes/No)");
-         this.hasDepression=sc.nextBoolean();
+         this.hasDepression=sc.nextInt();
          sc.nextLine();
          System.out.println("Have you been diagnosed with anxiety? (Yes/No)");
-         this.hasAnxiety=sc.nextBoolean();
+         this.hasAnxiety=sc.nextInt();
          sc.nextLine();
          System.out.println("Have you been diagnosed with bipolar disorder? (Yes/No)");
-         this.hasBipolarDisorder=sc.nextBoolean();
+         this.hasBipolarDisorder=sc.nextInt();
          sc.nextLine();
          System.out.println("Are you currently taking any psychiatric medications? (Yes/No)");
-         this.takesPsychiatricMeds=sc.nextBoolean();
+         this.takesPsychiatricMeds=sc.nextInt();
          sc.nextLine();
          System.out.println("Have you experienced memory loss? (Yes/No)");
-         this.hasMemoryLoss=sc.nextBoolean();
+         this.hasMemoryLoss=sc.nextInt();
          sc.nextLine();
          System.out.println("Have you been diagnosed with dementia or dementia-like symptoms? (Yes/No)");
-         this.hasDementiaSymptoms=sc.nextBoolean();
+         this.hasDementiaSymptoms=sc.nextInt();
          sc.nextLine();
  
  
          //Cancer & Family Medical History
          System.out.println("Have you ever been diagnosed with cancer? (Yes/No) ");
-         this.hadCancer=sc.nextBoolean();
+         this.hadCancer=sc.nextInt();
          sc.nextLine();
          System.out.println("If yes, what was the stage at diagnosis? (Enter stage number)");
          this.cancerStage=sc.nextInt();
          
          sc.nextLine();
          System.out.println("Have you undergone any cancer treatment? (Yes/No)");
-         this.hadCancerTreatment=sc.nextBoolean();
+         this.hadCancerTreatment=sc.nextInt();
 
          System.out.println("Is there a family history of heart disease? (Yes/No)");
-         this.familyHasHeartDisease=sc.nextBoolean();
+         this.familyHasHeartDisease=sc.nextInt();
          sc.nextLine();
          System.out.println("Is there a family history of diabetes? (Yes/No)");
-         this.familyHasDiabetes=sc.nextBoolean();
+         this.familyHasDiabetes=sc.nextInt();
          sc.nextLine();
          System.out.println("Is there a family history of cancer? (Yes/No)");
-         this.familyHasCancer=sc.nextBoolean();
+         this.familyHasCancer=sc.nextInt();
          sc.nextLine();
          System.out.println("Does your family have any known genetic disorders? (Yes/No)");
-         this.hasGeneticDisorders=sc.nextBoolean();
+         this.hasGeneticDisorders=sc.nextInt();
          sc.nextLine();
  
          //Recent Medical Tests & Examinations
          System.out.println("Have you had a blood test in the past year? (Yes/No)");
-         this.hadRecentBloodTests=sc.nextBoolean();
+         this.hadRecentBloodTests=sc.nextInt();
          System.out.println("Have you undergone an MRI scan? (Yes/No)");
-         this.hadMRI=sc.nextBoolean();
+         this.hadMRI=sc.nextInt();
          System.out.println("Have you undergone a CT scan? (Yes/No)");
-         this.hadCTScan=sc.nextBoolean();
+         this.hadCTScan=sc.nextInt();
          System.out.println("Have you had an X-ray in the past year? (Yes/No)");
-         this.hadXRay=sc.nextBoolean();
+         this.hadXRay=sc.nextInt();
          System.out.println("Have you undergone a biopsy? (Yes/No)");
-         this.hadBiopsy=sc.nextBoolean();
+         this.hadBiopsy=sc.nextInt();
  
  
          //Medications & Allergies
          System.out.println("Are you currently taking any prescription medications? (Yes/No)");
-         this.takesPrescriptionMeds=sc.nextBoolean();
+         this.takesPrescriptionMeds=sc.nextInt();
          System.out.println("Are you currently taking any over-the-counter (OTC) medications? (Yes/No)");
-         this.takesOTCMeds=sc.nextBoolean();
+         this.takesOTCMeds=sc.nextInt();
          System.out.println("Do you have any known drug allergies? (Yes/No)");
-         this.hasDrugAllergies=sc.nextBoolean();
+         this.hasDrugAllergies=sc.nextInt();
  
  
          //Vaccination History
          System.out.println("Have you received the COVID-19 vaccine? (Yes/No)");
-         this.hadCovidVaccine=sc.nextBoolean();
+         this.hadCovidVaccine=sc.nextInt();
          System.out.println("Have you received the flu vaccine? (Yes/No)");
-         this.hadFluVaccine=sc.nextBoolean();
+         this.hadFluVaccine=sc.nextInt();
          System.out.println("Have you received the hepatitis vaccine?(Yes/No)");
-         this.hadHepatitisVaccine=sc.nextBoolean();
+         this.hadHepatitisVaccine=sc.nextInt();
  
 
         sc.close();
