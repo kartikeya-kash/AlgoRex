@@ -9,8 +9,8 @@ public class userdata {
         String userid;
         String DOB;
         String sex;
-        double height = 175;  
-        double weight = 70;   
+        double height ;  
+        double weight ;   
         double BMI = weight / Math.pow(height / 100, 2); 
         short age;
         String country;
@@ -37,7 +37,7 @@ public class userdata {
 
 
         // Metabolic Health Screening
-        boolean diabetes; // false if no diabetes, true if yes
+        boolean diabetes;
         short dib_type; // 0 if no diabetes, 1 for Type 1, 2 for Type 2
         double l_sugar_level; // Last fasting blood sugar level, 0 if not applicable
         String medication; // "insulin", "metformin", etc., else enter "none"
@@ -60,7 +60,6 @@ public class userdata {
         // Major Organ Systems Evaluation
         boolean hasLiverDisease; // true if history of liver disease
         boolean hasAlcoholLiverDamage; // true if diagnosed
-
         boolean hasKidneyDisease; // true if history of kidney disease
         boolean hadKidneyStones; // true if had kidney stones
         boolean hadDialysis; // true if undergone dialysis
@@ -126,7 +125,7 @@ public class userdata {
          System.out.print("Date of Birth (DD/MM/YYYY): ");
          this.DOB=sc.nextLine();
 
-         System.out.print("Gender: ");
+         System.out.print("Enter your Gender: (M/F)");
          this.sex=sc.nextLine();
 
          System.out.print("Height (in cm): ");
@@ -135,7 +134,9 @@ public class userdata {
          System.out.print("Weight (in kg): ");
          this.weight=sc.nextDouble();
 
-         System.out.print("enter age: ");
+         this.BMI = this.weight / Math.pow(this.height / 100, 2);
+
+         System.out.print("enter your age: ");
          this.age=(short) sc.nextInt();
 
          System.out.print("Country of Residence: ");
@@ -151,104 +152,175 @@ public class userdata {
 
          //Lifestyle Assessment
          System.out.println("Do you currently smoke? (Yes/No) If yes, how frequently do you smoke? (Scale: 0-5)  \n");
+         this.smoking = sc.nextInt();
          System.out.println("Do you consume alcohol? (Yes/No) If yes, how frequently do you consume alcohol? (Scale: 0-5) ");
+         this.alcohol = sc.nextInt();
+
          System.out.println(" Do you use any recreational drugs? (Yes/No) If yes, how frequently? (Scale: 0-5)");
-         System.out.println("How often do you engage in physical exercise? (Daily/Weekends/None) ");
-         System.out.println("What is your usual intensity of exercise? (Low/Moderate/High)");
- 
+         this.drug = sc.nextInt();
+         System.out.println("How often do you engage in physical exercise? (daily/weekends/none) intensity of exercise? (Low/Moderate/High) enter dl/dm/dh/wl/wm/wh/none ");
+         this.exercise = sc.nextLine();
+        
  
          //Cardiovascular Health
-         System.out.println(" Have you ever had a heart attack? (Yes/No)");
-         System.out.println("Have you ever experienced a stroke? (Yes/No) If yes, how many times?");
+         System.out.println(" Have you ever had a heart attack? (true/false)");
+         this.heartattack=sc.nextBoolean();
+
+         System.out.println("Have you ever experienced a stroke? (Yes/No) If yes, how many times? else enter 0");
+         this.stroke=sc.nextShort();
          System.out.println("Have you been diagnosed with high blood pressure (HBP)? (Yes/No) If yes, please provide the latest recorded HBP reading.  \n");
+         this.HBP=sc.nextInt();
          System.out.println("Have you been diagnosed with low blood pressure (LBP)? (Yes/No) If yes, please provide the latest recorded LBP reading.  \n");
-         System.out.println("What is your most recent cholesterol level reading? (If known)");
+         this.LBP=sc.nextInt();
+         System.out.println("What is your most recent cholesterol level reading? (If known else enter 0)");
+         this.cholesterol_levels = sc.nextInt();
          System.out.println("Have you experienced chest pain in the past year? (Yes/No) If yes, how frequently does it occur? (Enter number of times)");
+         this.chestpainfreq = sc.nextInt();
          System.out.println("How long does the chest pain typically last? (Enter duration in minutes)");
+         this.chestpainfreq_duration=sc.nextDouble();
          System.out.println("Have you experienced shortness of breath? (Yes/No) If yes, what is the typical duration? (Enter duration in minutes)");
+         this.breath_shortness= sc.nextDouble();
  
  
  
          //Metabolic Health Screening
-         System.out.println("Have you been diagnosed with diabetes? (Yes/No) If yes, specify type: (Type 1/Type 2)");
-         System.out.println("What was your last recorded fasting blood sugar level? (Enter value if known, else state \"Unknown\")");
-         System.out.println("Are you currently on any medication for diabetes? (Yes/No) If yes, specify the medication.");
+         System.out.println("do you have diabetes? (true/false) ");
+         this.diabetes=sc.nextBoolean();
+         System.out.println("Have you been diagnosed with diabetes? (Yes/No) If yes, specify type: (Type 1/Type 2 else enter 0)");
+        this.dib_type=sc.nextShort();
+         System.out.println("What was your last recorded fasting blood sugar level? (Enter value if known, else state 0");
+         this.l_sugar_level=sc.nextDouble();
+         System.out.println("Are you currently on any medication for diabetes? (Yes/No) If yes, specify the medication insulin/metformin else enter \"none\".");
+         this.medication=sc.nextLine();
  
  
          //Thyroid Function
-         System.out.println("Have you been diagnosed with hypothyroidism? (Yes/No)");
-         System.out.println("Have you been diagnosed with hyperthyroidism? (Yes/No)");
-         System.out.println("Are you currently taking any thyroid medication? (Yes/No)");
+         System.out.println("Have you been diagnosed with hypothyroidism? (true/false)");
+         this.hasHypothyroidism=sc.nextBoolean();
+         System.out.println("Have you been diagnosed with hyperthyroidism? (true/false)");
+         this.hasHyperthyroidism=sc.nextBoolean();
+         System.out.println("Are you currently taking any thyroid medication? (true/false)");
+         this.takesThyroidMedications=sc.nextBoolean();
  
  
          //Obesity and Related Conditions
-         System.out.println("Have you ever been diagnosed as obese? (Yes/No)");
          System.out.println("Have you attempted weight loss programs or treatments in the past? (Yes/No)");
+         this.hasWeightLossHistory=sc.nextBoolean();
          System.out.println("Have you undergone bariatric surgery or any weight loss surgery? (Yes/No)");
+         this.hadBariatricSurgery=sc.nextBoolean();
  
  
          //Lipid Profile
-         System.out.println("What is your most recent recorded HDL cholesterol level? (Enter value if known, else state \"Unknown\")");
-         System.out.println("What is your most recent recorded LDL cholesterol level? (Enter value if known, else state \"Unknown\") ");
-         System.out.println("What is your most recent triglycerides level? (Enter value if known, else state \"Unknown\")");
+         System.out.println("What is your most recent recorded HDL cholesterol level? (Enter value if known, else state 0.0)");
+         this.hdl=sc.nextFloat();
+         System.out.println("What is your most recent recorded LDL cholesterol level? (Enter value if known, else state 0.0) ");
+         this.ldl=sc.nextFloat();
+         System.out.println("What is your most recent triglycerides level? (Enter value if known, else state 0.0)");
+         this.triglycerides=sc.nextFloat();
  
  
          //Major Organ Systems Evaluation
-         System.out.println("Have you been diagnosed with any liver disease? (Yes/No)");
+         System.out.println("Have you been diagnosed with any liver disease? (t/f)");
+         this.hasLiverDisease=sc.nextBoolean();
          System.out.println("Have you been diagnosed with alcohol-induced liver damage? (Yes/No)");
+         this.hasAlcoholLiverDamage=sc.nextBoolean();
          System.out.println("Have you been diagnosed with any kidney disease? (Yes/No)");
+         this.hasKidneyDisease=sc.nextBoolean();
          System.out.println("Have you had kidney stones? (Yes/No)");
+         this.hadKidneyStones=sc.nextBoolean();
          System.out.println("Have you ever undergone dialysis? (Yes/No)");
+         this.hadDialysis=sc.nextBoolean();
          System.out.println("Are you taking medications that may affect kidney function (e.g., NSAIDs, diuretics)? (Yes/No)");
+         this.takesKidneyAffectingMeds=sc.nextBoolean();
+
  
  
          //Respiratory Health
          System.out.println("Have you been diagnosed with asthma? (Yes/No)");
+         this.hasAsthma=sc.nextBoolean();
          System.out.println("Have you been diagnosed with chronic obstructive pulmonary disease (COPD) or chronic bronchitis? (Yes/No) ");
+         this.hasCOPD=sc.nextBoolean();
+
          System.out.println("Have you been diagnosed with smoking-related lung conditions? (Yes/No)");
+         this.hasSmokingLungDamage=sc.nextBoolean();
+
          System.out.println(" Have you been diagnosed with sleep apnea? (Yes/No)");
+         this.hasSleepApnea=sc.nextBoolean();
+
          System.out.println("Do you use a CPAP machine for sleep apnea? (Yes/No) ");
+         this.usesCPAP=sc.nextBoolean();
+
          System.out.println("Have you experienced frequent lung infections? (Yes/No)");
+         this.hasFrequentLungInfections=sc.nextBoolean();
+
  
  
          //Neurological & Mental Health Screening
          System.out.println("Have you ever experienced a stroke? (Yes/No)");
+         this.hadStroke=sc.nextBoolean();
          System.out.println("Have you suffered a brain injury in the past? (Yes/No)");
+         this.hadBrainInjury=sc.nextBoolean();
          System.out.println("Have you been diagnosed with depression? (Yes/No)");
+         this.hasDepression=sc.nextBoolean();
          System.out.println("Have you been diagnosed with anxiety? (Yes/No)");
+         this.hasAnxiety=sc.nextBoolean();
          System.out.println("Have you been diagnosed with bipolar disorder? (Yes/No)");
+         this.hasBipolarDisorder=sc.nextBoolean();
          System.out.println("Are you currently taking any psychiatric medications? (Yes/No)");
+         this.takesPsychiatricMeds=sc.nextBoolean();
          System.out.println("Have you experienced memory loss? (Yes/No)");
+         this.hasMemoryLoss=sc.nextBoolean();
          System.out.println("Have you been diagnosed with dementia or dementia-like symptoms? (Yes/No)");
+         this.hasDementiaSymptoms=sc.nextBoolean();
  
  
          //Cancer & Family Medical History
-         System.out.println("Have you ever been diagnosed with cancer? (Yes/No) If yes, what was the stage at diagnosis? (Enter stage number)");
+         System.out.println("Have you ever been diagnosed with cancer? (Yes/No) ");
+         this.hadCancer=sc.nextBoolean();
+         System.out.println("If yes, what was the stage at diagnosis? (Enter stage number)");
+         this.cancerStage=sc.nextInt();
          System.out.println("Have you undergone any cancer treatment? (Yes/No)");
+         this.hadCancerTreatment=sc.nextBoolean();
+
          System.out.println("Is there a family history of heart disease? (Yes/No)");
+         this.familyHasHeartDisease=sc.nextBoolean();
          System.out.println("Is there a family history of diabetes? (Yes/No)");
+         this.familyHasDiabetes=sc.nextBoolean();
          System.out.println("Is there a family history of cancer? (Yes/No)");
+         this.familyHasCancer=sc.nextBoolean();
          System.out.println("Does your family have any known genetic disorders? (Yes/No)");
+         this.hasGeneticDisorders=sc.nextBoolean();
  
  
          //Recent Medical Tests & Examinations
          System.out.println("Have you had a blood test in the past year? (Yes/No)");
+         this.hadRecentBloodTests=sc.nextBoolean();
          System.out.println("Have you undergone an MRI scan? (Yes/No)");
+         this.hadMRI=sc.nextBoolean();
          System.out.println("Have you undergone a CT scan? (Yes/No)");
+         this.hadCTScan=sc.nextBoolean();
          System.out.println("Have you had an X-ray in the past year? (Yes/No)");
+         this.hadXRay=sc.nextBoolean();
          System.out.println("Have you undergone a biopsy? (Yes/No)");
+         this.hadBiopsy=sc.nextBoolean();
  
  
          //Medications & Allergies
          System.out.println("Are you currently taking any prescription medications? (Yes/No)");
+         this.takesPrescriptionMeds=sc.nextBoolean();
          System.out.println("Are you currently taking any over-the-counter (OTC) medications? (Yes/No)");
+         this.takesOTCMeds=sc.nextBoolean();
          System.out.println("Do you have any known drug allergies? (Yes/No)");
+         this.hasDrugAllergies=sc.nextBoolean();
  
  
          //Vaccination History
          System.out.println("Have you received the COVID-19 vaccine? (Yes/No)");
+         this.hadCovidVaccine=sc.nextBoolean();
          System.out.println("Have you received the flu vaccine? (Yes/No)");
+         this.hadFluVaccine=sc.nextBoolean();
          System.out.println("Have you received the hepatitis vaccine?(Yes/No)");
+         this.hadHepatitisVaccine=sc.nextBoolean();
  
 
         sc.close();
