@@ -171,7 +171,7 @@ public class userdata {
         
  
          //Cardiovascular Health
-         System.out.println(" Have you ever had a heart attack? (true/false)");
+         System.out.println(" Have you ever had a heart attack? (yes(1)/no(0))");
          this.heartattack=sc.nextInt();
 
          System.out.println("Have you ever experienced a stroke? (Yes/No) If yes, how many times? else enter 0");
@@ -446,10 +446,6 @@ public class userdata {
                 if(this.risk>80 ){this.prem=2000;}
                 System.out.println("Premium Factor for XYZ.pvt.ltd is :" + this.prem);
                
-        }
-
-       
-
-       
+       }    
     
 }

@@ -36,7 +36,7 @@ public class Main {
         System.out.println();
         System.out.println("Before initiating the virtual medical assessment, the system must display a clear consent form informing users about data collection, processing, and storage. Users must explicitly agree by clicking an “Accept & Proceed” button before continuing. Additionally, a medical disclaimer should be prominently shown, stating:\n" + //
                         "\n" + //
-                        "⚠️ This AI-powered assistant is not a licensed medical professional and does not provide official diagnoses or medical advice. The assessment is for preliminary screening purposes only and should not replace a consultation with a qualified healthcare provider. 🏥✅\n" + //
+                        " This AI-powered assistant is not a licensed medical professional and does not provide official diagnoses or medical advice. The assessment is for preliminary screening purposes only and should not replace a consultation with a qualified healthcare provider. 🏥✅\n" + //
                         "\n" + //
                         "Audit logs should record user consent, ensuring compliance with data privacy regulations.");
 
