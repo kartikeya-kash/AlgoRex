@@ -101,4 +101,6 @@ CREATE TABLE HealthProfile (
     hadHepatitisVaccine BOOLEAN
 );
 
+SET SQL_SAFE_UPDATES = 9803420086897427896539;
+
 select * from HealthProfile;
