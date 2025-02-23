@@ -110,9 +110,9 @@ public class Main {
                                 int affectedRows = statement.executeUpdate(sql);
                 
                                 if (affectedRows > 0) {
-                                    System.out.println("Data receved!");
+                                    System.out.println("Data received!");
                                 } else {
-                                    System.out.println("Data Not receved!");
+                                    System.out.println("Data Not received!");
                                 }
                             }
                         } catch (SQLException e) {
