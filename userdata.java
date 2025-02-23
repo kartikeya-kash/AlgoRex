@@ -111,8 +111,8 @@ public class userdata {
         int hadFluVaccine; // true if vaccinated for flu
         int hadHepatitisVaccine; // true if vaccinated for hepatitis
 
-       void user_input(){
-        Scanner sc = new Scanner(System.in);
+        void user_input(){
+                Scanner sc = new Scanner(System.in);
 
         
          //Personal Information
@@ -366,6 +366,39 @@ public class userdata {
  
 
         sc.close();
+       }
+
+       void calculate_risk()
+       {
+        if(this.age>90){this.risk+=3;}
+        if(this.age<90 && this.age>70){this.risk+=2;}
+        if(this.age<70){this.risk+=2;}
+        if(this.BMI>30){this.risk+=2;}
+        if(this.smoking >0 && this.smoking <=2){this.risk+=1;}
+        if(this.smoking >2 ){this.risk+=2;}
+        if(this.alcohol>2){this.risk+=2;}
+        if(this.alcohol<=2){this.risk+=1;}
+        if(this.drug>2){this.risk+=2;}
+        if(this.drug<=2){this.risk+=1;}
+        if(this.heartattack==1){this.risk+= 5;}
+        if(this.stroke>=1){this.risk+= 2;}
+        if(this.chestpainfreq>0.5){this.risk+= 1;}
+        if(this.heartattack==1){this.risk+= 5;}
+        if(this.breath_shortness>0.5){this.risk+= 1;}
+        if(this.dib_type>1){this.risk+= 2;}
+        if(this.heartattack==1){this.risk+= 5;}
+        if(this.hasLiverDisease==1){this.risk+= 1;}
+        if(this.hasKidneyDisease==1){this.risk+= 1;}
+        if(this.hadKidneyStones==1){this.risk+= 2;}
+        if(this.hasLiverDisease==1){this.risk+= 1;}
+        if(this.hadDialysis==1){this.risk+= 2;}
+        if(this.hadBrainInjury==1){this.risk+= 5;}
+        if(this.hasBipolarDisorder==1){this.risk+= 2;}
+        if(this.hadCancer==1){this.risk+= 4;}
+        if(this.cancerStage>2){this.risk+= 4;}
+        if(this.hasDrugAllergies==1){this.risk+= 3;}
+
+        System.out.println("Risk Factor for user is :" + this.risk);
        }
     
 }
