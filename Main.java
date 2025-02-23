@@ -118,10 +118,8 @@ public class Main {
                         } catch (SQLException e) {
                             e.printStackTrace();
                         }
-                        String C_name;
-                        System.out.println("enter the company name to know their risk factor and premiums");
-                        C_name = input.nextLine();
-                        user.calculate_risk(C_name);
+                       
+                        user.calculate_risk();
                     
                     }
                         break;

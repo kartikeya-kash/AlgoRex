@@ -369,10 +369,10 @@ public class userdata {
         sc.close();
        }
 
-       void calculate_risk(String C_name)
+       void calculate_risk()
        {
-        switch (C_name) {
-                case "XYZ":
+        
+        
                 if(this.age>90){this.risk+=3;}
                 if(this.age<90 && this.age>70){this.risk+=2;}
                 if(this.age<70){this.risk+=2;}
@@ -400,18 +400,16 @@ public class userdata {
                 if(this.hadCancer==1){this.risk+= 4;}
                 if(this.cancerStage>2){this.risk+= 4;}
                 if(this.hasDrugAllergies==1){this.risk+= 3;}
-        
+                if(this.risk>100){this.risk=100;}
                 System.out.println("Risk Factor for XYZ.pvt.ltd is :" + this.risk);
                 if(this.risk<20){this.prem=350;}
                 if(this.risk>20 && this.risk<40){this.prem=550;}
                 if(this.risk>40 && this.risk<60){this.prem=850;}
                 if(this.risk>60 && this.risk<80){this.prem=1050;}
                 if(this.risk>80 ){this.prem=2550;}
-                System.out.println("Premium Factor for XYZ.pvt.ltd is :" + this.risk);
+                System.out.println("Premium Factor for XYZ.pvt.ltd is :" + this.prem);
 
-                        break;
-
-                case "ABC":
+                        
                 if(this.age>90){this.risk+=7;}
                 if(this.age<90 && this.age>70){this.risk+=5;}
                 if(this.age<70){this.risk+=4;}
@@ -439,20 +437,18 @@ public class userdata {
                 if(this.hadCancer==1){this.risk+= 4;}
                 if(this.cancerStage>2){this.risk+= 4;}
                 if(this.hasDrugAllergies==1){this.risk+= 3;}
+                if(this.risk>100){this.risk=100;}
                 System.out.println("Risk Factor for ABC.pvt.ltd is :" + this.risk);
                 if(this.risk<20){this.prem=250;}
                 if(this.risk>20 && this.risk<40){this.prem=350;}
                 if(this.risk>40 && this.risk<60){this.prem=1150;}
                 if(this.risk>60 && this.risk<80){this.prem=1350;}
                 if(this.risk>80 ){this.prem=2000;}
-                System.out.println("Premium Factor for XYZ.pvt.ltd is :" + this.risk);
-                break;
-        
-                default: System.out.println("Enter company name to see risk factors");
-                        break;
+                System.out.println("Premium Factor for XYZ.pvt.ltd is :" + this.prem);
+               
         }
 
-       }
+       
 
        
     
